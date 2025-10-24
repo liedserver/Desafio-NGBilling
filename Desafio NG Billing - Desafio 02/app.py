@@ -1,11 +1,13 @@
 import os
-import smtplib
-from email.message import EmailMessage
+import asyncio
+from email.mime.text import MIMEText
 from dotenv import load_dotenv
 import cx_Oracle
+from aiosmtplib import SMTP
 
 load_dotenv()
 
+# Config Oracle
 user = os.getenv("ORACLE_USER")
 password = os.getenv("ORACLE_PASSWORD")
 dsn = os.getenv("ORACLE_DSN")
@@ -25,24 +27,36 @@ def get_last_id():
         print(f"Erro ao acessar Oracle: {e}")
         return None
 
-def send_email(last_id):
-    email_host = os.getenv("EMAIL_HOST")
-    email_port = int(os.getenv("EMAIL_PORT", 587))
+async def send_email_async(last_id):
+    email_host = os.getenv("EMAIL_HOST", "localhost")
+    email_port = int(os.getenv("EMAIL_PORT", 1025))
     email_user = os.getenv("EMAIL_USER")
     email_password = os.getenv("EMAIL_PASSWORD")
-    email_to = os.getenv("EMAIL_TO")
+    email_to = os.getenv("EMAIL_TO", "teste@local").split(",")
 
-    msg = EmailMessage()
+    msg = MIMEText(f"O último ID da sequência é: {last_id}")
     msg['Subject'] = "Último ID da sequência"
     msg['From'] = email_user
-    msg['To'] = email_to
-    msg.set_content(f"O último ID da sequência é: {last_id}")
+    msg['To'] = ", ".join(email_to)
 
     try:
-        with smtplib.SMTP(email_host, email_port) as server:
-            server.starttls()
-            server.login(email_user, email_password)
-            server.send_message(msg)
+        if email_host in ("localhost", "127.0.0.1") and email_port == 1025:
+            # SMTP fake (MailHog / Debug SMTP)
+            smtp = SMTP(hostname=email_host, port=email_port)
+            await smtp.connect()
+        else:
+            # SMTP real
+            if email_port == 465:
+                smtp = SMTP(hostname=email_host, port=email_port, use_tls=True)
+                await smtp.connect()
+                await smtp.login(email_user, email_password)
+            else:
+                smtp = SMTP(hostname=email_host, port=email_port, start_tls=True)
+                await smtp.connect()
+                await smtp.login(email_user, email_password)
+
+        await smtp.send_message(msg)
+        await smtp.quit()
         print("E-mail enviado com sucesso!")
     except Exception as e:
         print(f"Erro ao enviar e-mail: {e}")
@@ -50,6 +64,6 @@ def send_email(last_id):
 if __name__ == "__main__":
     last_id = get_last_id()
     if last_id is not None:
-        send_email(last_id)
+        asyncio.run(send_email_async(last_id))
     else:
         print("Não foi possível obter o último ID.")
