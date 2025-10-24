@@ -12,12 +12,12 @@ DESAFIO-NGBILLING/
 │ └── 📄 requirements.txt 
 ├── 📁 Desafio NG Billing - Desafio 02 
 │ ├── 📄 .env.sample 
-│ ├── 🐍 app.py 
+│ ├── 📄 app.py 
 │ ├── 📄 README.md 
 │ └── 📄 requirements.txt 
 ├── 📁 Desafio NG Billing - Desafio 03 
 │ ├── 📄 mover-arquivo.service 
-│ ├── 📜 mover-arquivos.sh 
+│ ├── 📄 mover-arquivos.sh 
 │ └── 📄 README.md 
 └── 📄 README.md
 ```
