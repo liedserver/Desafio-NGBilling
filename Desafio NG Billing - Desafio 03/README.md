@@ -38,7 +38,3 @@ journalctl -u move_files.service -f
 ```
 
 - O serviço reinicia automaticamente se falhar (`Restart=always`).
-
-## ✍️ Autor
-**Liedson Saraiva**  
-Infraestrutura e DevOps Engineer 💻
