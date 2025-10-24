@@ -11,7 +11,7 @@ Este projeto implementa um **serviço Linux** que monitora um diretório e move 
 ### Configuração
 > [!NOTE]
 > Lembre-se de ajustar os caminhos conforme o seu ambiente.
-> Altere em mover-arquivo.service e mover-arquivos.sh
+> Altere em mover-arquivo.service e mover-arquivos.sh.
 
 
 1. Instalar dependência:
