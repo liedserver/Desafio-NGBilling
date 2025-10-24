@@ -7,7 +7,7 @@ from aiosmtplib import SMTP
 
 load_dotenv()
 
-# Config Oracle
+# Oracle
 user = os.getenv("ORACLE_USER")
 password = os.getenv("ORACLE_PASSWORD")
 dsn = os.getenv("ORACLE_DSN")
@@ -41,11 +41,11 @@ async def send_email_async(last_id):
 
     try:
         if email_host in ("localhost", "127.0.0.1") and email_port == 1025:
-            #smtp-fake
+            #SMTP DE TESTE
             smtp = SMTP(hostname=email_host, port=email_port)
             await smtp.connect()
         else:
-            # SMTP real
+            # SMTP DE PRODUCAO
             if email_port == 465:
                 smtp = SMTP(hostname=email_host, port=email_port, use_tls=True)
                 await smtp.connect()
@@ -64,6 +64,7 @@ async def send_email_async(last_id):
 if __name__ == "__main__":
     last_id = get_last_id()
     if last_id is not None:
+        print(f"[DEBUG] Último ID obtido do Oracle: {last_id}")
         asyncio.run(send_email_async(last_id))
     else:
         print("Não foi possível obter o último ID.")
