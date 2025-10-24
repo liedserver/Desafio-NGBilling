@@ -27,10 +27,13 @@ DESAFIO-NGBILLING/
 
 Neste desafio, foi desenvolvida uma aplicação **Python** utilizando o framework **Flask** para criar uma API que lista arquivos de um diretório específico. A aplicação é totalmente containerizada com Docker, garantindo portabilidade e um ambiente de execução consistente.
 
-* **Tecnologias:** ![Python](https://img.shields.io/badge/Python-3.13.5-blue?logo=python&logoColor=white) ![Flask](https://img.shields.io/badge/Flask-3.0.3-blue?logo=python&logoColor=white) ![Docker](https://img.shields.io/badge/Docker-23.0.3-blue?logo=docker&logoColor=white)
-* **Funcionalidade:**
-    * Expõe um endpoint `GET /arquivos` que retorna uma lista de nomes de arquivos em formato JSON.
-    * O diretório `/arquivos` dentro do container é mapeado a partir do host local, permitindo a leitura de arquivos externos.
+**Tecnologias:** 
+
+![Python](https://img.shields.io/badge/Python-3.13.5-blue?logo=python&logoColor=white) ![Flask](https://img.shields.io/badge/Flask-3.0.3-blue?logo=python&logoColor=white) ![Docker](https://img.shields.io/badge/Docker-23.0.3-blue?logo=docker&logoColor=white)
+
+**Funcionalidade:**
+* Expõe um endpoint `GET /arquivos` que retorna uma lista de nomes de arquivos em formato JSON.
+* O diretório `/arquivos` dentro do container é mapeado a partir do host local, permitindo a leitura de arquivos externos.
 * **Monitoramento:** O `README.md` do desafio detalha estratégias de monitoramento para disponibilidade, uso de recursos (CPU, memória), espaço em disco e logs.
 
 ---
@@ -39,11 +42,15 @@ Neste desafio, foi desenvolvida uma aplicação **Python** utilizando o framewor
 
 Este projeto consiste em um script **Python** que automatiza a tarefa de consultar o próximo valor de uma `SEQUENCE` em um banco de dados **Oracle** e notificar este valor por e-mail.
 
-* **Tecnologias:** `Python`, `cx_Oracle`, `smtplib`.
-* **Funcionalidade:**
-    * Conecta-se a um banco de dados Oracle para executar a query `SELECT SEQ_ID.NEXTVAL AS ULTIMO_ID FROM DUAL`.
-    * Envia o resultado obtido para um destinatário de e-mail pré-configurado.
-* **Segurança:** As credenciais sensíveis (banco de dados e e-mail) são gerenciadas de forma segura através de um arquivo `.env`, que não deve ser versionado.
+**Tecnologias:**
+
+![Python](https://img.shields.io/badge/Python-3.13.5-blue?logo=python&logoColor=white) [![cx_Oracle 8.3.0](https://custom-icon-badges.demolab.com/badge/cx_Oracle-8.3.0-F80000?logo=oracle&logoColor=fff)](https://pypi.org/project/cx_Oracle/8.3.0/) ![smtplib](https://img.shields.io/badge/smtplib-3.3-blue?logo=python&logoColor=white)
+
+**Funcionalidade:**
+ * Conecta-se a um banco de dados Oracle para executar a query `SELECT SEQ_ID.NEXTVAL AS ULTIMO_ID FROM DUAL`.
+ * Envia o resultado obtido para um destinatário de e-mail pré-configurado.
+
+**Segurança:** As credenciais sensíveis (banco de dados e e-mail) são gerenciadas de forma segura através de um arquivo `.env`, que não deve ser versionado.
 
 ---
 
@@ -51,11 +58,14 @@ Este projeto consiste em um script **Python** que automatiza a tarefa de consult
 
 O terceiro desafio implementa um serviço **Linux**, gerenciado pelo `systemd`, que monitora um diretório e move arquivos recém-criados para outro local automaticamente.
 
-* **Tecnologias:** `Bash`, `inotify-tools`, `systemd`.
-* **Funcionalidade:**
-    * Utiliza o comando `inotifywait` para detectar o evento de criação de novos arquivos em um diretório de origem.
-    * Move o arquivo detectado para um diretório de destino.
-    * O script é configurado para rodar como um serviço (`.service`) que inicia com o sistema e reinicia automaticamente em caso de falha (`Restart=always`).
+**Tecnologias:** 
+
+![Bash](https://img.shields.io/badge/Bash-latest-4EAA25?logo=gnu-bash&logoColor=white) ![inotify-tools](https://img.shields.io/badge/inotify--tools-latest-333?logo=linux&logoColor=white) ![systemd](https://img.shields.io/badge/systemd-latest-333?logo=linux&logoColor=white)
+
+**Funcionalidade:**
+* Utiliza o comando `inotifywait` para detectar o evento de criação de novos arquivos em um diretório de origem.
+* Move o arquivo detectado para um diretório de destino.
+* O script é configurado para rodar como um serviço (`.service`) que inicia com o sistema e reinicia automaticamente em caso de falha (`Restart=always`).
 
 ---
 
