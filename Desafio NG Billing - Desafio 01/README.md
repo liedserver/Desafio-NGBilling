@@ -46,6 +46,8 @@ sudo docker ps
 curl http://localhost:8080/arquivos
 ```
 
+![Diagrama](../prints/01.png)
+
 ### Monitoramento e estabilidade
 
 | Tipo | O que Monitorar | Por quê |
