@@ -17,6 +17,9 @@ Exemplo de resposta:
 ```
 ### Como executar
 
+> [!NOTE]
+> Certifique-se de ter o Docker instalado antes de executar os comandos.
+
 #### 1. Criar diretório local
 ```bash
 mkdir ~/arquivos_teste
@@ -30,10 +33,15 @@ docker build -t desafio1-python .
 
 #### 3. Executar container
 ```bash
-docker run -d -p 8080:8080 -v ~/arquivos_teste:/arquivos --name desafio1 desafio1-python
+sudo docker run -d -p 8080:8080 -v ~/arquivos_teste:/arquivos --name desafio1 desafio1-python
 ```
 
-#### 4. Testar
+#### 4. Ver o container em execução
+```bash
+sudo docker ps
+```
+
+#### 5. Testar
 ```bash
 curl http://localhost:8080/arquivos
 ```
