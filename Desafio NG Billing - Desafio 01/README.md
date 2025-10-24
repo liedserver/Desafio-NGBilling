@@ -46,6 +46,7 @@ sudo docker ps
 curl http://localhost:8080/arquivos
 ```
 
+##### Teste do serviço Flask retornando a lista de arquivos mapeados via Docker
 ![01](https://github.com/liedserver/Desafio-NGBilling/blob/master/prints/desafio01.png?raw=true)
 
 ### Monitoramento e estabilidade
