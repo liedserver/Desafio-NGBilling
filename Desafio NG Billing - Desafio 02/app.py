@@ -41,7 +41,7 @@ async def send_email_async(last_id):
 
     try:
         if email_host in ("localhost", "127.0.0.1") and email_port == 1025:
-            # SMTP fake (MailHog / Debug SMTP)
+            #smtp-fake
             smtp = SMTP(hostname=email_host, port=email_port)
             await smtp.connect()
         else:
