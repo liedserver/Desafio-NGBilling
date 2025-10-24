@@ -9,6 +9,10 @@ Este projeto implementa um **serviço Linux** que monitora um diretório e move 
 - Rodar como serviço systemd ativo no boot
 
 ### Configuração
+> [!NOTE]
+> Lembre-se de ajustar os caminhos conforme o seu ambiente.
+> Altere em mover-arquivo.service e mover-arquivos.sh
+
 
 1. Instalar dependência:
 ```bash
@@ -20,8 +24,13 @@ sudo apt install inotify-tools
 SOURCE_DIR="/caminho/para/origem"
 TARGET_DIR="/caminho/para/destino"
 ```
+ 
+3. Colocar o script em executável
+```bash
+sudo chmod +x caminho/para/executavel/mover-arquivos.sh
+```
 
-3. Copiar arquivo de serviço para systemd:
+4. Copiar arquivo de serviço para systemd:
 ```bash
 sudo cp mover-arquivo.service /etc/systemd/system/
 sudo systemctl daemon-reload

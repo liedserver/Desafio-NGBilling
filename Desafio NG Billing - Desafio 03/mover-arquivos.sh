@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # MUDAR PARA O DIRETORIO DESEJADO
-SOURCE_DIR="/home/ngbilling/01" 
-TARGET_DIR="/home/ngbilling/02"
+SOURCE_DIR="/caminho/para/origem" 
+TARGET_DIR="/caminho/para/destino"
 
 mkdir -p "$SOURCE_DIR"
 mkdir -p "$TARGET_DIR"

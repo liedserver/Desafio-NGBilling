@@ -4,7 +4,7 @@ After=network.target
 
 [Service]
 Type=simple
-ExecStart=/bin/bash /home/ngbilling/mover-arquivos.sh
+ExecStart=/bin/bash /caminho/para/executavel/mover-arquivos.sh
 Restart=always
 User=ngbilling
 Group=ngbilling
