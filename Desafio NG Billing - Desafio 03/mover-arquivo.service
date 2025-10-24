@@ -4,10 +4,10 @@ After=network.target
 
 [Service]
 Type=simple
-ExecStart=/bin/bash /home/usuario/mover-arquivos.sh
+ExecStart=/bin/bash /home/ngbilling/mover-arquivos.sh
 Restart=always
-User=usuario
-Group=usuario
+User=ngbilling
+Group=ngbilling
 
 [Install]
 WantedBy=multi-user.target
