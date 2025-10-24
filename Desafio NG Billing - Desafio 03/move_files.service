@@ -1,0 +1,13 @@
+[Unit]
+Description=Serviço que move arquivos automaticamente
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/bin/bash /home/usuario/desafio3-bash/move_files.sh
+Restart=always
+User=usuario
+Group=usuario
+
+[Install]
+WantedBy=multi-user.target
