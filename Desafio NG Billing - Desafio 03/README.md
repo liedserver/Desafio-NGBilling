@@ -15,7 +15,7 @@ Este projeto implementa um **serviço Linux** que monitora um diretório e move 
 sudo apt install inotify-tools
 ```
 
-2. Ajustar diretórios no script `move_files.sh`:
+2. Ajustar diretórios no script `mover-arquivos.sh`:
 ```bash
 SOURCE_DIR="/caminho/para/origem"
 TARGET_DIR="/caminho/para/destino"
@@ -23,18 +23,18 @@ TARGET_DIR="/caminho/para/destino"
 
 3. Copiar arquivo de serviço para systemd:
 ```bash
-sudo cp move_files.service /etc/systemd/system/
+sudo cp mover-arquivo.service /etc/systemd/system/
 sudo systemctl daemon-reload
-sudo systemctl enable move_files.service
-sudo systemctl start move_files.service
-sudo systemctl status move_files.service
+sudo systemctl enable mover-arquivo.service
+sudo systemctl start mover-arquivo.service
+sudo systemctl status mover-arquivo.service
 ```
 
 ## 🔍 Observações
 
 - Logs podem ser vistos com:
 ```bash
-journalctl -u move_files.service -f
+journalctl -u mover-arquivo.service -f
 ```
 
 - O serviço reinicia automaticamente se falhar (`Restart=always`).

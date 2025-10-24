@@ -4,7 +4,7 @@ After=network.target
 
 [Service]
 Type=simple
-ExecStart=/bin/bash /home/usuario/desafio3-bash/move_files.sh
+ExecStart=/bin/bash /home/usuario/mover-arquivos.sh
 Restart=always
 User=usuario
 Group=usuario
