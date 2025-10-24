@@ -45,6 +45,9 @@ sudo docker ps
 ```bash
 curl http://localhost:8080/arquivos
 ```
+
+![01](https://github.com/liedserver/Desafio-NGBilling/blob/master/prints/01.jpg?raw=true)
+
 ### Monitoramento e estabilidade
 
 | Tipo | O que Monitorar | Por quê |
