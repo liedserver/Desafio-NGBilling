@@ -2,19 +2,19 @@ from flask import Flask, jsonify
 import os
 
 app = Flask(__name__)
-DIRECTORY = "/data"
 
-@app.route("/files", methods=["GET"])
-def list_files():
+WATCH_DIR = "/arquivos"
+
+@app.route('/arquivos', methods=['GET'])
+def listar_arquivos():
     try:
-        files = os.listdir(DIRECTORY)
-        return jsonify({"files": files})
+        if not os.path.exists(WATCH_DIR):
+            return jsonify({"erro": f"Diretório '{WATCH_DIR}' não encontrado."}), 404
+        
+        arquivos = os.listdir(WATCH_DIR)
+        return jsonify({"arquivos": arquivos})
     except Exception as e:
-        return jsonify({"error": str(e)}), 500
+        return jsonify({"erro": str(e)}), 500
 
-@app.route("/health", methods=["GET"])
-def health():
-    return jsonify({"status": "ok"}), 200
-
-if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=8080)
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=8080)
