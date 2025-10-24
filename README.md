@@ -2,7 +2,7 @@
 
 Este repositório reúne três desafios técnicos focados em automação, monitoramento e desenvolvimento de serviços, demonstrando habilidades práticas em um ambiente de Infraestrutura e DevOps. Cada desafio está contido em seu próprio diretório com sua respectiva solução e documentação.
 
-## 📂 Estrutura do Repositório 
+### 📂 Estrutura do Repositório 
 ```
 DESAFIO-NGBILLING/ 
 ├── 📁 Desafio NG Billing - Desafio 01 
@@ -23,7 +23,7 @@ DESAFIO-NGBILLING/
 ```
 ---
 
-## 1: API em Python com Docker para Listagem de Arquivos
+### 1: API em Python com Docker para Listagem de Arquivos
 
 Neste desafio, foi desenvolvida uma aplicação **Python** utilizando o framework **Flask** para criar uma API que lista arquivos de um diretório específico. A aplicação é totalmente containerizada com Docker, garantindo portabilidade e um ambiente de execução consistente.
 
@@ -35,7 +35,7 @@ Neste desafio, foi desenvolvida uma aplicação **Python** utilizando o framewor
 
 ---
 
-## 2: Script Python para Consulta em Banco Oracle e Envio de E-mail
+### 2: Script Python para Consulta em Banco Oracle e Envio de E-mail
 
 Este projeto consiste em um script **Python** que automatiza a tarefa de consultar o próximo valor de uma `SEQUENCE` em um banco de dados **Oracle** e notificar este valor por e-mail.
 
@@ -47,7 +47,7 @@ Este projeto consiste em um script **Python** que automatiza a tarefa de consult
 
 ---
 
-## 3: Serviço Linux em Bash para Monitoramento e Movimentação de Arquivos
+### 3: Serviço Linux em Bash para Monitoramento e Movimentação de Arquivos
 
 O terceiro desafio implementa um serviço **Linux**, gerenciado pelo `systemd`, que monitora um diretório e move arquivos recém-criados para outro local automaticamente.
 
@@ -59,6 +59,5 @@ O terceiro desafio implementa um serviço **Linux**, gerenciado pelo `systemd`, 
 
 ---
 
-## ✍️ Autor
 
-**Liedson Saraiva** Infraestrutura e DevOps Engineer 💻
+#### elaborado por @liedserver
