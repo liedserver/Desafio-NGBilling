@@ -1,4 +1,4 @@
-# 🚀 Desafios Técnicos - Infraestrutura e DevOps (NG Billing)
+# 🚀 Desafio NG Billing - Analista de Produção
 
 Este repositório reúne três desafios técnicos focados em automação, monitoramento e desenvolvimento de serviços, demonstrando habilidades práticas em um ambiente de Infraestrutura e DevOps. Cada desafio está contido em seu próprio diretório com sua respectiva solução e documentação.
 
