@@ -27,7 +27,7 @@ DESAFIO-NGBILLING/
 
 Neste desafio, foi desenvolvida uma aplicação **Python** utilizando o framework **Flask** para criar uma API que lista arquivos de um diretório específico. A aplicação é totalmente containerizada com Docker, garantindo portabilidade e um ambiente de execução consistente.
 
-* **Tecnologias:** ![`Python`](https://img.shields.io/badge/Python-3776AB.svg?style=for-the-badge&logo=Python&logoColor=white), `Flask`, `Docker`.
+* **Tecnologias:** ![Python](https://img.shields.io/badge/Python-3.13.5-blue?logo=python&logoColor=white) ![Flask](https://img.shields.io/badge/Flask-3.0.3-blue?logo=python&logoColor=white) ![Docker](https://img.shields.io/badge/Docker-23.0.3-blue?logo=docker&logoColor=white)
 * **Funcionalidade:**
     * Expõe um endpoint `GET /arquivos` que retorna uma lista de nomes de arquivos em formato JSON.
     * O diretório `/arquivos` dentro do container é mapeado a partir do host local, permitindo a leitura de arquivos externos.
