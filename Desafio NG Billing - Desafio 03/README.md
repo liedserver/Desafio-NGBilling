@@ -1,14 +1,14 @@
-# 🚀 Desafio 3 - Bash (Monitoramento de Diretório)
+# Desafio 3 - Bash (Monitoramento de Diretório)
 
 Este projeto implementa um **serviço Linux** que monitora um diretório e move arquivos automaticamente para outro diretório assim que eles forem criados.
 
-## 🧠 Funcionalidade
+### Funcionalidade
 
 - Monitorar diretório de origem usando `inotifywait`
 - Mover arquivos detectados para diretório de destino
 - Rodar como serviço systemd ativo no boot
 
-## 🛠️ Configuração
+### Configuração
 
 1. Instalar dependência:
 ```bash
@@ -30,7 +30,7 @@ sudo systemctl start mover-arquivo.service
 sudo systemctl status mover-arquivo.service
 ```
 
-## 🔍 Observações
+### Observações
 
 - Logs podem ser vistos com:
 ```bash

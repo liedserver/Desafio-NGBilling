@@ -1,9 +1,8 @@
-# 🚀 Desafio 01 - Docker (Python + Flask)
+# Desafio 01 - Docker (Python + Flask)
 
 Este projeto implementa uma aplicação **Python (Flask)** que lê o conteúdo de um diretório (mapeado do host local) e retorna a lista de arquivos via uma requisição HTTP `GET`.
 
----
-### 🧠 Funcionalidade
+### Funcionalidade
 
 - Endpoint disponível:
   ```
@@ -16,8 +15,7 @@ Exemplo de resposta:
   "arquivos": ["teste.txt", "foto.png", "log.txt"]
 }
 ```
----
-### 🛠️ Como executar
+### Como executar
 
 #### 1. Criar diretório local
 ```bash
@@ -40,8 +38,7 @@ docker run -d -p 8080:8080 -v ~/arquivos_teste:/arquivos --name desafio1 desafio
 curl http://localhost:8080/arquivos
 ```
 
----
-### 🔍 Monitoramento e estabilidade
+### Monitoramento e estabilidade
 
 | Tipo | O que Monitorar | Por quê |
 |------|------------------|---------|
@@ -56,5 +53,3 @@ Exemplo opcional de HEALTHCHECK:
 HEALTHCHECK --interval=30s --timeout=5s --start-period=10s --retries=3 \
  CMD curl -f http://localhost:8080/arquivos || exit 1
 ```
-
----

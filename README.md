@@ -2,7 +2,7 @@
 
 Este repositório reúne três desafios técnicos focados em automação, monitoramento e desenvolvimento de serviços, demonstrando habilidades práticas em um ambiente de Infraestrutura e DevOps. Cada desafio está contido em seu próprio diretório com sua respectiva solução e documentação.
 
-### 📂 Estrutura do Repositório 
+### Estrutura do Repositório 
 ```
 DESAFIO-NGBILLING/ 
 ├── 📁 Desafio NG Billing - Desafio 01 
