@@ -27,7 +27,7 @@ TARGET_DIR="/caminho/para/destino"
  
 3. Colocar o script em executável
 ```bash
-sudo chmod +x caminho/para/executavel/mover-arquivos.sh
+sudo chmod +x /caminho/para/executavel/mover-arquivos.sh
 ```
 
 4. Copiar arquivo de serviço para systemd:
@@ -38,6 +38,9 @@ sudo systemctl enable mover-arquivo.service
 sudo systemctl start mover-arquivo.service
 sudo systemctl status mover-arquivo.service
 ```
+#### Systemd + inotifywait: Serviço `mover-arquivo.service` em ação, movendo arquivos automaticamente de `01` para `02` ao detectar novas criações.
+
+![01](https://github.com/liedserver/Desafio-NGBilling/blob/master/prints/desafio02.png?raw=true)
 
 ### Observações
 
